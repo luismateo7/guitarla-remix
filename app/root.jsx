@@ -75,3 +75,23 @@ import{
     )
   }
 
+  /** Manejo de Errores **/
+  export function CatchBoundary(){
+    const error = useCatch()
+
+    return(
+      <Document>
+        <p className='error'>{error.status} {error.statusText}</p>
+        <Link to='/' className='error-enlace'>Volver a Inicio</Link>
+      </Document>
+    )
+  }
+
+  export function ErrorBoundary({error}){
+    return(
+      <Document>
+        <p className='error'>{error.status} {error.statusText}</p>
+        <Link to='/' className='error-enlace'>Volver a Inicio</Link>
+      </Document>
+    )
+  }
